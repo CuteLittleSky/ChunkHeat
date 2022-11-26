@@ -126,10 +126,6 @@ public final class ChunkHeat extends JavaPlugin implements Listener {
             chunkHeapMap.put(chunk, counter);
         }
         int counts = counter.getCounter().getAndAdd(entityWeight.getOrDefault(event.getEntityType(), 1));
-        if (counts > limit) {
-            event.setDroppedExp(0);
-            event.getDrops().clear();
-        }
     }
 
     @Override
